@@ -1,0 +1,17 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 650px;
+    padding: 30px;
+}
+
+footer {
+\    display: flex;
+    justify-content: center;
+}
+footer > ul {
+    list-style: none;
+}
+footer li {
+    float: left;
+    padding: 10px;
+}
