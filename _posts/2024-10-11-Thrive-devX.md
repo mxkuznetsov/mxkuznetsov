@@ -5,19 +5,17 @@ permalink: /ux-eng/
 categories: fe-eng
 layout: default
 ---
-As part of our mission to uphold engineering excellence, I led accessibility audits with a third-party vendor and customers to certify our WCAG compliance. I delivered a 93% reduction in accessibility issues.
+As a UX engineer, I sought out opportunities to amplify and simplify the work of our partners in design, localization, and content through updating processes, documentation, or tooling. I wrote new components frequently, but sometimes the solution wasn’t just about code.
 
-I took inspiration from our security audits to define goals, timelines, and metrics of success. Once we received the outcome, I triaged responsibility between design, design system, and engineering. This framework allowed me to transform individual issues into process changes and interventions across the company. To address issues moving forward, I refactored docs, updated components and shared tooling to prevent future issues. I also worked with stakeholders such as legal and product to convey the importance of accessibility.
+<img class="caseStudyImage" src="../assets/img/text-transform.png" alt="Mozilla documentation of CSS text transforms showing the uppercasing transform."/>
 
-Automation and tooling supported the effort to move beyond an “audit-fix-audit-fix” cycle. I summarized findings on areas of improvement and success in a report and in shareable graphics to underscore the importance of these changes.
+## Locale-aware uppercasing
+While using `text-transform: uppercase` was common across our codebase, in languages like Greek, this capitalizes them incorrectly! I extended our typography component to include locale-aware uppercasing with FormatJS, which would allow us to overwrite or modify all instances of it in the future if needed. To introduce the changes, I used Sourcegraph batch changes to easily update existing implementations, and then set a monitor so that we could direct people to the best practice if they introduced new instances of the anti-pattern. Now, it just works. The best practice is there by default and engineers never have to worry about this again.
 
-## Impact and outcomes
-This work included:
-- **Design-developer handoff improvement:** I simplified available accessibility annotation Figma libraries to create one tailored to our top audit issues
-- **Design review:** addressing issues earlier in the software development lifecycle reduced wasted work hours
-- **Metrics:** Lighthouse and Sourcegraph monitor pings created lightweight, scannable metrics outside our annual audits
-- **Design system updates:** Tokening and custom componentry means that we could address issues quickly across the organization
-- **Automated testing:** react-axe and eslint-plugin-jsx-a11y for feedback right in the IDE
-- **Education:** documentation updates, providing example patterns, demos of new features and tools such as the Accessibility Insights browser tool, empowered everyone in the organization to be champion accessibility
+## Copy guidelines
+In speaking with our content lead, she surfaced that we often introduced capitalization errors in our strings. With her input on prioritization, I developed a linter that checked for uncapitalized brand words and sentence casing. Individual repos could expand the wordbank as needed for specialized projects. This change saved our content person from constantly reviewing new strings.
 
-I delivered our 2023 VPAT certifying and stating our compliance, noting up to a 47% reduction in accessibility issues from our previous audit. The following year, our customer noted a 93% reduction in accessibility issues. This multi-pronged approach has transformed the accessibility culture - everyone has a part to play in accessibility and small changes can roll into big wins.
+As part of implementation, I standardized and centralized our lint configs. We’ll be able to migrate to strict typing in the future and developers who switch teams have one less discrepancy between repos to manage.
+
+## Defining data visualization standards
+I worked with designers to understand their concerns and priorities around data visualization. By referencing research papers and best practices, I provided a short 1-pager on guidelines and guardrails for accessibility. This allowed us to have a defined standard in an overwhelming flood of knowledge so that we could move forward on styling and palettes.
