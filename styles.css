@@ -18,20 +18,30 @@ footer > ul {
 footer li {
     float: left;
     padding: 10px;
+    line-height: 1;
+}
+
+li {
+    line-height: 1.5;
 }
 
 .caseStudyImage {
     width: 75%;
     height: auto;
-    padding: 10px;
+    padding: 8px;
+    margin: 12px;
     justify-self: center;
     border: 1px gray solid;
+ }
+
+ .tallImage {
+    width: 50%;
  }
 
  .caseStudyContent {
     margin: 0 auto;
  }
 
- .caseStudyContent > p {
+ .caseStudyContent img {
      display: grid;
  }
