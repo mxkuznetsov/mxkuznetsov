@@ -1,0 +1,23 @@
+---
+title:  "Developer velocity at Thrive"
+date:   2024-10-11 13:30:51 -0700
+permalink: /ux-eng/
+categories: fe-eng
+layout: default
+---
+As part of our mission to uphold engineering excellence, I led accessibility audits with a third-party vendor and customers to certify our WCAG compliance. I delivered a 93% reduction in accessibility issues.
+
+I took inspiration from our security audits to define goals, timelines, and metrics of success. Once we received the outcome, I triaged responsibility between design, design system, and engineering. This framework allowed me to transform individual issues into process changes and interventions across the company. To address issues moving forward, I refactored docs, updated components and shared tooling to prevent future issues. I also worked with stakeholders such as legal and product to convey the importance of accessibility.
+
+Automation and tooling supported the effort to move beyond an “audit-fix-audit-fix” cycle. I summarized findings on areas of improvement and success in a report and in shareable graphics to underscore the importance of these changes.
+
+## Impact and outcomes
+This work included:
+- **Design-developer handoff improvement:** I simplified available accessibility annotation Figma libraries to create one tailored to our top audit issues
+- **Design review:** addressing issues earlier in the software development lifecycle reduced wasted work hours
+- **Metrics:** Lighthouse and Sourcegraph monitor pings created lightweight, scannable metrics outside our annual audits
+- **Design system updates:** Tokening and custom componentry means that we could address issues quickly across the organization
+- **Automated testing:** react-axe and eslint-plugin-jsx-a11y for feedback right in the IDE
+- **Education:** documentation updates, providing example patterns, demos of new features and tools such as the Accessibility Insights browser tool, empowered everyone in the organization to be champion accessibility
+
+I delivered our 2023 VPAT certifying and stating our compliance, noting up to a 47% reduction in accessibility issues from our previous audit. The following year, our customer noted a 93% reduction in accessibility issues. This multi-pronged approach has transformed the accessibility culture - everyone has a part to play in accessibility and small changes can roll into big wins.
