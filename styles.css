@@ -44,4 +44,5 @@ li {
 
  .caseStudyContent img {
      display: grid;
+     border-radius: 4px;
  }
