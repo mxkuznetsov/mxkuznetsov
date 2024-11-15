@@ -19,8 +19,6 @@ Simply by upgrading to the latest version of Leafkit, developers received fixes 
 - Appropriately-sized mobile touch targets
 - Best practices for aria labeling and semantic HTML.
 
-<img class="caseStudyImage" src="../assets/img/HCM.png" alt="Storybook screenshot of documentation on high contrast mode"/>
-
 ## The stack
 - **React Typescript**: many components are presentational or black boxed - we wanted to limit visual customization in while allowing for custom logic. 
 - **Storybook**: developer single source of truth.
